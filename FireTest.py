@@ -23,12 +23,10 @@ IMG_SIZE = 100
 X = []
 Y = []
 for category in CATEGORIES:  
-
     path = os.path.join(DATADIR,category) 
     class_num = CATEGORIES.index(category)  
         
     for img in tqdm(os.listdir(path)):
-        
         img_array = cv2.imread(os.path.join(path,img))  
         if os.path.join(path,img)=="/tmp/sharmads/Fire/.DS_Store":
           continue
@@ -43,11 +41,8 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 X = np.array(X).reshape(-1, IMG_SIZE, IMG_SIZE, 3)
 X = X/255.0
 X.shape[1:]
-print(len(X),len(Y))
-
 
 model=load_model('fnet.h5')
-
 loss, accuracy= model.evaluate(X,Y, verbose=1)
 print(model.metrics_names)
 print(loss, accuracy)

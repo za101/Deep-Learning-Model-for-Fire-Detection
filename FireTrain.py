@@ -1,10 +1,9 @@
+"""
 from google.colab import drive
 drive.mount('/content/drive')
-
 !pip install -U --pre efficientnet
-
+"""
 from efficientnet.keras import EfficientNetB7
-
 import numpy as np
 import os
 import numpy as np
@@ -57,7 +56,6 @@ validation_generator =  val_datagen.flow_from_directory( validation_dir,
 last_layer =pre_trained_model.get_layer('block7d_se_reshape')
 print('last layer output shape: ', last_layer.output_shape)
 last_output = last_layer.output
-
 
 for layer in pre_trained_model.layers:
   layer.trainable = True

@@ -85,4 +85,4 @@ history = model.fit_generator(
             validation_steps = 100,
             verbose = 1)
 
-model.save('fnet.h5')
+model.save('fulleffv1.h5')

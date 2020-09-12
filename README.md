@@ -1,4 +1,4 @@
-# High-Performance-EfficientNet-Based-Deep-Learning-Model-for-Fire-Detection
+# Deep-Learning-Model-for-Fire-Detection
 
 Link to my Dataset:
 https://drive.google.com/file/d/1cu_OcVDUhcrQyMc4Hh3AQ0fYjfwSjQA0/view
